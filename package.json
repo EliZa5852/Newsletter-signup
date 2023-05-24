@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliZa5852/Newsletter-signup.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
