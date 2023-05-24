@@ -34,9 +34,11 @@ app.post("/",function(req,res){
     };
     const jsonData = JSON.stringify(data);
     const url = "https://us21.api.mailchimp.com/3.0/lists/507f0c4701";
+
+    const apiKey = process.env.apiKeyMailchimp;
     const options = {
         method:"POST",
-        auth:"Eliza1:bb24c6e770a7ed20f6c4b3aaf33945a7-us21"
+        auth:"Eliza1:"+apiKey
     }
 
     const request = https.request(url,options,function(response){
@@ -59,7 +61,7 @@ app.listen(process.env.PORT || 8000,function(){
 });
 
 // API Key
-//bb24c6e770a7ed20f6c4b3aaf33945a7-us21
+//1ac1ac88ea13d455c113cd322bce44f0-us21
 
 //List ID
 //507f0c4701
