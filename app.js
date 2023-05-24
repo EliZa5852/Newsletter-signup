@@ -10,7 +10,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/",function(req,res){
-    res.sendFile(__dirname+"/signup.html");
+    res.sendFile(__dirname+"/index.html");
 });
 
 app.post("/",function(req,res){
@@ -35,10 +35,10 @@ app.post("/",function(req,res){
     const jsonData = JSON.stringify(data);
     const url = "https://us21.api.mailchimp.com/3.0/lists/507f0c4701";
 
-    const apiKey = process.env.apiKeyMailchimp;
+
     const options = {
         method:"POST",
-        auth:"Eliza1:"+apiKey
+        auth:"Eliza1:1ac1ac88ea13d455c113cd322bce44f0-us21"
     }
 
     const request = https.request(url,options,function(response){
